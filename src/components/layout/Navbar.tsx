@@ -9,7 +9,9 @@ export default function Navbar() {
   const links = [
     { href: '/', label: '홈' },
     { href: '/b2b-solutions', label: 'B2B 솔루션' },
-    { href: '/flagship-store', label: '플래그십 스토어' },
+    { href: '/acscent-sinchon', label: 'ACSCENT SINCHON' },
+    { href: '/acscent-id', label: 'ACSCENT ID' },
+    { href: '/acscent-wow', label: 'ACSCENT WOW' },
     { href: '/online-services', label: '온라인 서비스' },
     { href: '/contact', label: '컨택' },
   ]

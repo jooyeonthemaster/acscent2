@@ -12,7 +12,7 @@ const directions = [
   {
     title: "향기로 각인되는 경험",
     description: "시각과 청각을 넘어, 가장 원초적인 감각인 후각으로 기억에 깊이를 더합니다.",
-    details: "후각은 기억과 감정에 가장 직접적으로 연결되는 감각입니다. 우리는 이 강력한 연결을 통해 잊히지 않는 순간을 만듭니다.",
+    details: "후각은 기억에 가장 직접적으로 연결되는 감각입니다. 이 강력한 연결을 통해 잊히지 않는 순간을 만듭니다.",
     icon: "02",
   },
   {
@@ -134,7 +134,7 @@ export default function DirectionSection() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-center text-white/60 tracking-wide"
           >
-            우리는 예술의 상상력, 기술의 구현력, 그리고 향기의 각인력을 통해 시간이 지나도 희미해지지 않는 경험을 선사합니다.
+            우리는 예술의 상상력, 기술의 구현력, 그리고 향기의 각인력을 통해 시간이 지나도 희미해지지 않는 경험을 선사합니다.<br/>
             네안데르는 과거와 현재, 그리고 미래가 공존하는 공간에서 잊을 수 없는 순간을 만듭니다.
           </motion.p>
         </motion.div>

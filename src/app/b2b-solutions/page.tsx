@@ -1,6 +1,6 @@
 "use client"
 import React, { useRef, useState } from 'react'
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -48,11 +48,10 @@ interface GalleryToggleProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   images: ReferenceImage[];
-  category: 'event' | 'ai' | 'media' | 'scent';
 }
 
 // 이미지 갤러리 컴포넌트
-const GalleryToggle: React.FC<GalleryToggleProps> = ({ isOpen, setIsOpen, images, category }) => {
+const GalleryToggle: React.FC<GalleryToggleProps> = ({ isOpen, setIsOpen, images }) => {
   const toggleVariants = {
     closed: { 
       opacity: 0.7,
@@ -197,13 +196,7 @@ export default function B2BSolutions() {
   };
   
   const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [50, 0, 0, -50]);
+  // Removed unused scroll progress tracking
   
   // 메인 페이지의 히어로 섹션과 동일한 애니메이션 설정
   const container = {
@@ -220,32 +213,6 @@ export default function B2BSolutions() {
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
-  
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        type: "spring", 
-        stiffness: 50, 
-        damping: 15,
-        duration: 0.8 
-      } 
-    }
-  };
-  
-  const titleVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        duration: 1.2,
-        ease: "easeOut"
-      } 
-    }
   };
   
   // 섹션별 애니메이션 variants 추가
@@ -503,9 +470,8 @@ export default function B2BSolutions() {
               
               <GalleryToggle 
                 isOpen={openGallery.event} 
-                setIsOpen={(isOpen) => toggleGallery('event')} 
+                setIsOpen={() => toggleGallery('event')} 
                 images={referenceImages.event}
-                category="event"
               />
               
               <div className="mt-12 text-center">
@@ -611,9 +577,8 @@ export default function B2BSolutions() {
               
               <GalleryToggle 
                 isOpen={openGallery.ai} 
-                setIsOpen={(isOpen) => toggleGallery('ai')} 
+                setIsOpen={() => toggleGallery('ai')} 
                 images={referenceImages.ai}
-                category="ai"
               />
               
               <div className="mt-12 text-center">
@@ -719,9 +684,8 @@ export default function B2BSolutions() {
               
               <GalleryToggle 
                 isOpen={openGallery.media} 
-                setIsOpen={(isOpen) => toggleGallery('media')} 
+                setIsOpen={() => toggleGallery('media')} 
                 images={referenceImages.media}
-                category="media"
               />
               
               <div className="mt-12 text-center">
@@ -826,9 +790,8 @@ export default function B2BSolutions() {
               
               <GalleryToggle 
                 isOpen={openGallery.scent} 
-                setIsOpen={(isOpen) => toggleGallery('scent')} 
+                setIsOpen={() => toggleGallery('scent')} 
                 images={referenceImages.scent}
-                category="scent"
               />
               
               <div className="mt-12 text-center">

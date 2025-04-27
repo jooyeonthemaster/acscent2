@@ -89,12 +89,12 @@ export default function PhilosophySection() {
             <h3 className="text-2xl md:text-3xl font-light mb-8 tracking-wide uppercase">이름의 의미</h3>
             <p className="text-gray-400 leading-relaxed text-base">
               네안데르(Neander)는 단순한 이름 그 이상의 이야기를 담고 있습니다. 독일의 한 계곡 이름인 네안데르탈에서 
-              발견된 고대 인류를 '네안데르탈인'이라 부르지만, 실제 '네안데르'는 그 지역의 시인이자 작곡가 요아힘 네안더의 
+              발견된 고대 인류를 &apos;네안데르탈인&apos;이라 부르지만, 실제 &apos;네안데르&apos;는 그 지역의 시인이자 작곡가 요아힘 네안더의 
               이름에서 비롯되었습니다.
             </p>
             <p className="text-gray-400 leading-relaxed text-base mt-4">
-              흥미로운 점은 이 이름의 언어적 변화입니다. 그리스식 표기인 '네안데르'는 독일어로 '노이먼(Neumann)'이며, 
-              영어로는 '뉴먼(Newman)', 즉 '신인류'를 의미합니다.
+              흥미로운 점은 이 이름의 언어적 변화입니다. 그리스식 표기인 &apos;네안데르&apos;는 독일어로 &apos;노이먼(Neumann)&apos;이며, 
+              영어로는 &apos;뉴먼(Newman)&apos;, 즉 &apos;신인류&apos;를 의미합니다.
             </p>
             <div className="mt-8 border-l-0 border-t border-white/40 pt-8">
               <p className="text-white text-sm tracking-widest uppercase">
